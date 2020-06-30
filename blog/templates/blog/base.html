@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>
+	{% block title %}
+	{% endblock %}
+	</title>  
+	<link href="{% static 'css/blog.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body style="font-style: italic;"> 
+	<nav class="navbar navbar-dark bg-dark">
+  	<a class="navbar-brand" href="#" >My Blog</a>
+	</nav><br>
+
+	<div class="container">
+	<div id="content"> 
+	{% block content %}   
+	{% endblock %} 
+	</div>
+	 <!--<div id="sidebar"> 
+	 	<h2>My blog</h2>
+	 	<p>This is my blog.</p>
+	 </div>--->
+	</div>
+</body>
+</html>
